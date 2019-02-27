@@ -14,7 +14,7 @@ prerequisite:
 2. Conda  library
 
    Follow this Step to run :
-1. Git clone
+1. git clone https://github.com/kandoi1994/OpenIssue.git
 2. cd Myproject/My_project (run the command from the directory where you did clone)
 3. conda create -n github_issue python (github_issue is name of virtual environment you can give what you want)
 4. conda activate github_issue
