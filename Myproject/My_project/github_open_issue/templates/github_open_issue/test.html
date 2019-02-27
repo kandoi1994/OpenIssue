@@ -1,0 +1,52 @@
+{% block content %} {% load staticfiles %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing </title>
+</head>
+<body>
+<h1>Welcome To GIT HUB </h1>
+Give Url : <input type="text" id="myText">
+<button type="button" class="btn btn-default" style="border-color: #000;" id="submit-github-repo-url">Show Result</button>
+
+<p hidden id="senttable">{{ senttable }}</p>
+</body>
+</html>
+
+<script type="text/javascript" >
+function github_repo_url() 
+{
+	      //alert(document.getElementById("myText").value);
+            url = "/claculate_github_result/q";
+            url = url.replace('q', document.getElementById("myText").value);
+	        $.ajax({
+                        type: 'GET',
+                        url: url,
+                        data: {},
+                        dataType: 'text',
+                        success: function(data) {
+                        	// if(data) {   // DO SOMETHING  
+                        	// 	senttable = data
+                         //             var a = $('#senttable');
+                         //                        alert(a);
+                         //                            }
+                        }
+                });
+
+}
+
+	
+		// alert("submit");
+	document.getElementById('submit-github-repo-url').onclick =function(){
+		//alert("press");
+		github_repo_url();
+	}
+     //var a = $('#senttable');
+     //alert(a.value);
+    
+</script>
+{% endblock %}
