@@ -61,7 +61,7 @@ class test12:
                     issue_till_7day = issue_till_7day + 1
                         
 
-        t.add_row([Total_open_issue,issue_same_day,issue_after_7day,issue_till_7day])
+        t.add_row([Total_open_issue,issue_same_day,issue_till_7day,issue_after_7day])
         print(t)
         files = []
         files.append(Total_open_issue)
